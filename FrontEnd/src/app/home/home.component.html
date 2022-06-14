@@ -1,0 +1,144 @@
+
+<app-header></app-header>
+   
+  <ngb-carousel *ngIf="images">
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[0]" alt="Random first slide" class="w-100">
+      </div>
+     
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[1]" alt="Random second slide" class="w-100">
+      </div>
+     
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[2]" alt="Random third slide" class="w-100"> 
+      </div>
+      
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[3]" alt="Random second slide" class="w-100">
+      </div>
+      
+    </ng-template>
+  </ngb-carousel>
+   
+    
+     <div class="container-fluid pt-5 background-color px-5 pl-5">
+         <h2 class="font-family">
+             Recomended Movies
+         </h2>
+       <div class="row movies ">
+              <div class="col picture-1" *ngFor="let movie of Recomended; let id=index">
+                 <a [routerLink]="['/movies/movie-details', id+1]" ><img src="../assets/images/Image{{id}}.png" alt="Doctor"  />
+                  </a> 
+                  <p class="bold-text font-family pt-3">{{movieName[id]}}
+  </p>
+                
+             </div>
+      
+              
+         </div>
+   
+     </div>
+     <div class=" Entertainment pt-5  container-fluid  background-color px-5 pl-5">
+         <h2 class="font-family">
+            The Best of Entertainment
+         </h2>
+         <div class="row">
+              <div class="col  p-0 picture-1">
+                  <img src="../assets/images/ComedyShows.png" alt="ComedyShows" class="width-2" />
+             </div>
+            
+             <div class="col  p-0 picture-2">
+                  <img src="../assets/images/KidsZone.png" alt="KidsZone" class="width-2" />
+             </div>
+             <div class="col  p-0 picture-3">
+                  <img src="../assets/images/Stayfit.png" alt="Stayfit" class="width-2" />
+             </div>
+            
+             <div class="col  p-0 picture-4">
+                  <img src="../assets/images/Food.png " alt="Food" class="width-2" />
+             </div>
+              <div class="col  p-0 picture-5">
+                 <img src="../assets/images/Workshop.png" alt="Workshop" class="width-2"  />
+             </div>
+         </div>
+     </div>
+      <div class=" Events container-fluid pt-5 font-family background-color px-5 pl-5">
+         <h2>
+            Events Happening Near You
+         </h2>
+         <div class="row">
+              <div class="col  p-0 picture-1">
+                  <img src="../assets/images/Concert.png" alt="ComedyShows" class="width-3" />
+                  <p class="bold-text font-family pt-3">Sanam Band</p>
+                  
+                </div>
+            
+             <div class="col  p-0 picture-3">
+                  <img src="../assets/images/Photography.png" alt="KidsZone" class="width-3" />
+                  <p class="bold-text font-family pt-3">Basic Photography</p>
+    
+                </div>
+             <div class="col  p-0 picture-3">
+                  <img src="../assets/images/MasterLife.png" alt="Stayfit" class="width-3" />
+                  <p class="bold-text font-family pt-3">Learn to Connect with Anyone</p>
+     
+                </div>
+            
+             <div class="col  p-0 picture-3">
+                  <img src="../assets/images/KidsPopUp.png" alt="Food" class="width-3" />
+                  <p class="bold-text font-family pt-3">The Krazy Kids Karnival</p>
+                  
+                </div>
+              <div class="col  p-0 picture-5">
+                 <img src="../assets/images/Porat.png" alt="Workshop" class="width-3"  />
+                 <p class="bold-text font-family  pt-3">Porat</p>
+                
+                </div>
+         </div>
+     </div>
+      <div class=" online   container-fluid pt-5 font-family background-color px-5 pl-5">
+         <h2>
+           OnlineStreaming Events
+         </h2>
+         <div class="row">
+              <div class="col  p-0 picture-1">
+                  <img src="../assets/images/UpGrad.png" alt="ComedyShows" class="width-4" />
+                  <p class="bold-text font-family pt-3">Digital Marketing</p>
+                 
+                </div>
+            
+             <div class="col  p-0 picture-4">
+                  <img src="../assets/images/Macrame.png" alt="KidsZone" class="width-4" />
+                  <p class="bold-text font-family pt-3">DIY Bracelets</p>
+             
+                </div>
+             <div class="col  p-0 picture-3">
+                  <img src="../assets/images/Mandals.png" alt="Stayfit" class="width-4" />
+                  <p class="bold-text font-family pt-3">Dot mandala Essentials</p>
+                  
+                </div>
+            
+             <div class="col  p-0 picture-4">
+                  <img src="../assets/images/Beauty.png" alt="Food" class="width-4" />
+                  <p class="bold-text font-family pt-3">learn K-Beauty Secrets</p>
+                 
+                </div>
+              <div class="col  p-0 picture-5">
+                 <img src="../assets/images/DiyWorkshop.png" alt="Workshop" class="width-4"  />
+                 <p class="bold-text font-family pt-3">DIY Crochet Workshop</p>
+                 
+                </div>
+         </div>
+     </div>
+   <app-footer></app-footer>
+   
+         
+   

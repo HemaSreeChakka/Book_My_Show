@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+body{
+    background-color: #ececec;
+}
+.font-family{
+    font-family: 'Open Sans', sans-serif;
+}
+.form{
+    margin-left:260px;
+}
+.navbar.top-nav {
+    background-color: #2C2D3B;
+   height:80px;
+}
+
+.nav-link:hover {
+    text-decoration: none;
+
+}
+
+.backg {
+    background-color: #2C2D3B;
+    border: 1px solid #2C2D3B;
+  color:white;
+}
+
+.logo {
+    margin-left: 50px;
+    width: 200px;
+    height: 80px;
+}
+
+ul.services {
+    margin-left: 50px;
+}
+ul.a.services{
+    color:505054;
+}
+ul.a.services:hover{
+    color: #d4d4d6;
+}
+ul.gifts {
+    margin-left: 380px;
+}

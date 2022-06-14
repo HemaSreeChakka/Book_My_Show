@@ -1,0 +1,59 @@
+<app-header></app-header>
+<section id="detailMovie">
+    <div class="container" *ngIf="details">
+
+      <div class="section-title">
+        <h1><i class="icofont icofont-film"></i>{{ details.movieName }}</h1>
+      </div>
+    
+      <div class="details pb-5 ">
+        <div class="row flexbox-center pb-5 ">
+          <div class="col-lg-5 text-lg-left text-center">
+            <div class="movieDetails-content"><p class="text-white font-weight-bolder"><img src="../assets/images/Image{{movieId-1}}.png" alt="Doctor"  /></p>
+               
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="movieDetails-content">
+              <h2>{{ details.movieName }}</h2>
+              <p>{{ details.movieGenre }}</p>
+              <ul>
+                <li>
+                  <div class="movieDetail-left">Movie:</div>
+                  <div class="movieDetail-right">
+                    <div href="#">{{ details.movieName }}</div>
+                  </div>
+                </li>
+              
+                <li>
+                  <div class="movieDetail-left">Release:</div>
+                  <div class="movieDetail-right">{{ details.movieDate }}</div>
+                </li>
+                <li>
+                  <div class="movieDetail-left">Language:</div>
+                  <div class="movieDetail-right">{{ details.movieLanguage }}</div>
+                </li>
+                <li>
+                  <div class="movieDetail-left">Rating:</div>
+                  <div class="movieDetail-right">{{ details.movieRating }}</div>
+                </li>
+                <li>
+                  <div class="movieDetail-left">Description:</div>
+                  <div class="movieDetail-right">
+                    {{ details.movieDescription }}
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      <a  *ngIf="!authenticated" [routerLink]="['/sign-in']" class="theme-btn my-4"
+          > <i class="icofont-ticket "></i> BOOK MOVIE</a
+        >
+        <a  *ngIf="authenticated" [routerLink]="['/ticket-booking/booking-details',details.movieId]"  (click)="book()" class="theme-btn my-4"
+          > <i class="icofont-ticket "></i> BOOK MOVIE</a
+        >
+      </div>
+    </div>
+  </section>
+<app-footer></app-footer>

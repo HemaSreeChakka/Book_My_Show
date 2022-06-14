@@ -1,0 +1,60 @@
+<section id="detailMovie">
+    <div class="container" *ngIf="booking">
+      <div class="section-title">
+        <h1><i class="icofont icofont-film"></i>Booking Summary</h1>
+      </div>
+      <hr />
+      <div class="details">
+
+        <div class="row flexbox-center pb-5">
+          <div class="col-lg-7">
+            <div class="movieDetails-content">
+              <h2>Booking Details</h2>
+              <br />
+              <ul>
+                <li>
+                  <div class="movieDetail-left ">Ticket Id:</div>
+                  <div class="movieDetail-right margin-right">
+                    {{ bookingId }}
+                  </div>
+                </li>
+                <li>
+                  <div class="movieDetail-left">Transaction Mode:</div>
+                  <div class="movieDetail-right mx-3">
+                    {{ booking.transactionMode }}
+                  </div>
+                </li>
+                <li>
+                  <div class="movieDetail-left">Booking Date:</div>
+                  <div class="movieDetail-right margin-right">
+                    {{ booking.bookingDate }}
+                  </div>
+                </li>
+                <li>
+                  <div class="movieDetail-left">No.of.Seats:</div>
+                  <div class="movieDetail-right margin-right">
+                    {{ booking.seats }}
+                  </div>
+                </li>
+                <li>
+                  <div class="movieDetail-left">Total Cost:</div>
+                  <div class="movieDetail-right margin-right">
+                    {{ booking.totalCost }}
+                  </div>
+                </li>
+                <li>
+                  <div class="movieDetail-left">Transaction Status:</div>
+                  <div class="movieDetail-right mx-3">
+                    {{ booking.transactionStatus }}
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <a routerLink='/home' class="theme-btn mb-4 "
+          ><i class="icofont-ticket"></i>Back to HOME</a>
+        
+      </div>
+    </div>
+  </section>

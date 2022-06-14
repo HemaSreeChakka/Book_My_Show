@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+body{
+    background-color: #ececec;
+}
+.font-family{
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.bold-text {
+    font-weight: bold;
+}
+
+.width-1{
+    width:218px;
+    height:347x;
+}
+.width-2{
+    width:216px;
+    height:219px;
+}
+.width-3{
+    width:220px;
+    height:374px;
+}
+
+.width-4{
+    width:218px;
+    height:372px;
+}
+
+
+

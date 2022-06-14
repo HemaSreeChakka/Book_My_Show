@@ -1,0 +1,80 @@
+<nav class="navbar navbar-expand-lg container-fluid top-nav" >
+    <ul class="navbar-nav ">
+    <li class="nav-item">
+       <a class="navbar-brand" href="#"><img src="../assets/images/logo.png" alt="logo" class="logo" /></a></li>
+       
+         
+             <li class="nav-item mt-3"> <a class="nav-link " ><form class="d-flex " >
+                
+         <input class="form-control fa " style="width:450px" type="search"    placeholder=" &#xf002;   Search for Movies,Events,Plays,Sports and Activities" aria-label="Search">
+          
+         </form></a></li>
+      
+             <li class="nav-item mt-3 "><a class="nav-link  font-family " >
+    <form class="backg form">
+     <select class="backg  font-family form-control" >
+      <option value="Hyderabad" class="backg ">Hyderabad</option>
+       <option value="Mumbai"  class="backg ">Mumbai</option>
+    
+       <option value="Bengaluru"  class="backg ">Bengaluru</option>
+       <option value="NCR"  class="backg ">NCR</option>
+       <option value="Ahmedabad"  class="backg ">Ahmedabad</option>
+       <option value="Chandigarh"  class="backg ">Chandigarh</option>
+       <option value="Chennai"  class="backg ">Chennai</option>
+       <option value="Pune"  class="backg ">Pune</option>
+       <option value="Kolkata"  class="backg ">Kolkata</option>
+       <option value="Kochi"  class="backg ">Kochi</option>
+     </select>
+    </form>
+   </a></li>  
+         <li class="nav-item mt-3 float-end" *ngIf="!authenticated"><a class="nav-link  font-family pl-4" routerLink="/sign-in"><button class="bg-danger border border-danger form-control  text-white"  >Sign-in</button></a></li>
+         <li class="nav-item mt-3 float-end" *ngIf="authenticated"><a class="nav-link  font-family pl-4" routerLink="/sign-in"><button class="bg-danger border border-danger form-control  text-white" (click)="signOut()" >Sign-out</button></a></li>
+
+         <li class="nav-item mt-3 float-end"><a class="nav-link  font-family pt-3 px-4" ><i style="font-size:24px" class="fa text-white">&#xf0c9;</i></a></li> 
+       </ul>
+   </nav>
+   
+   <nav class="navbar navbar-expand-sm bg-dark services p-0 m-0 container-fluid">
+      
+     <ul class="navbar-nav services">
+       <li class="nav-item pr-2">
+         <a class="nav-link services  pr-2  text-white font-family" href="#">Movies</a>
+       </li>
+       <li class="nav-item px-2">
+         <a class="nav-link services pr-2 text-white font-family" href="#">Stream</a>
+       </li>
+       <li class="nav-item px-2">
+         <a class="nav-link services pr-2 text-white font-family" href="#">Events</a>
+       </li>
+       <li class="nav-item px-2">
+         <a class="nav-link services  pr-2 text-white font-family" href="#">Plays</a>
+       </li>
+       <li class="nav-item  pr-2">
+         <a class="nav-link services  pr-2 text-white font-family" href="#">Sports</a>
+       </li>
+       <li class="nav-item  pr-2">
+         <a class="nav-link services  pr-2 font-family text-white" href="#">Activities</a>
+       </li>
+       <li class="nav-item  pr-2">
+         <a class="nav-link services  pr-2 font-family text-white" href="#">Buzz</a>
+       </li>
+     </ul>
+    
+   
+     <ul class="navbar-nav gifts">
+       <li class="nav-item  pr-2">
+         <a class="nav-link text-white  pr-2 " href="#">ListYourShow</a>
+       </li>
+       <li class="nav-item  pr-2">
+         <a class="nav-link text-white  pr-2 " href="#">Corporates</a>
+       </li>
+       <li class="nav-item  pr-2">
+         <a class="nav-link text-white  pr-2 " href="#">Offers</a>
+       </li>
+       <li class="nav-item  pr-2">
+         <a class="nav-link text-white " href="#">Gift Cards</a>
+       </li>
+       
+     </ul>
+   </nav>
+   

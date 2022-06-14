@@ -1,0 +1,186 @@
+<section id="booking">
+  <h1 *ngIf="details">{{ details.movieName}}</h1>
+    <div class="custom-container">
+   
+      <div class="box-shadow p-5">
+      <form [formGroup]="bookingForm" *ngIf="bookingForm" (ngSubmit)="addBookingDetails()">
+      
+              <label for="" class="text-white ">Transaction Mode</label> 
+              <div class="pb-5">
+              <div class="form-check ">
+                <label class="form-check-label" for="radio1">
+                  <input type="radio" class="form-check-input text-white" formControlName="transactionMode" id="radio1" name="transactionMode"   value="Online" checked>Online
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label" for="radio2">
+                  <input type="radio" class="form-check-input text-white" formControlName="transactionMode" id="radio2"   name="transactionMode" value="Offline">Offline
+                </label>
+              </div>
+              </div>
+
+
+             
+      
+        <div class="form-group pb-5">
+          <div class="form-row">
+            <div class="date">
+                <label class="text-white">Bookng Date:</label>
+              <input
+                type="date"
+                class="form-control"
+                formControlName="bookingDate"
+              />
+            </div>
+          </div>
+        </div>
+        
+          <div class="form-group pb-5">
+            <div class="form-row">
+              <div class="seats">
+                  <label class="text-white">No.of seats:</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  formControlName="seats"
+                  id="seats"
+                  (change)="updateCost()"
+                />
+              </div>
+            </div>
+          </div>
+        <div class="form-group pb-5">
+            <div class="form-row">
+              <div class="seats"><span>
+                  <label class="text-white">Total Cost:</label>
+                 <input class="form-control"  formControlName="totalCost" name="totalCost" readonly="readonly" /></span> 
+              </div>
+            </div>
+          </div> 
+      
+         
+          <label for="" class="text-white ">Transaction Status</label> 
+          <div class="pb-5">
+          <div class="form-check ">
+            <label class="form-check-label" for="radio1">
+              <input type="radio" class="form-check-input text-white" formControlName="transactionStatus" id="radio1" name="transactionStatus" value="Pending" checked>Pending
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label" for="radio2">
+              <input type="radio" class="form-check-input text-white" formControlName="transactionStatus" id="radio2" name="transactionStatus" value="Completed">Completed
+            </label>
+          </div>
+          </div>
+        <div>
+          <button [routerLink]="['/home']" type="submit" class="btn btn-danger mx-5">
+            Cancel
+          </button>
+          
+          <button type="submit" class="btn btn-primary" >
+            Proceed <i class="icofont-long-arrow-right"></i>
+          </button>
+        </div>
+      </form>
+    
+     
+    </div>
+
+
+
+
+
+    </div>
+  </section>
+
+<!--
+  <div class="custom-container1 ">
+     
+      <div>
+  <h2>
+    Book Your Seats
+</h2>
+</div>
+<br>
+<ul class="showcase">
+<li>
+    <div class="seat"></div>
+    <small>Not selected</small>
+</li>
+<li>
+    <div class="seat selected"></div>
+    <small>selected</small>
+</li>
+<li>
+    <div class="seat occupied"></div>
+    <small>Occupied</small>
+</li>
+</ul>
+
+<div class="container1">
+    <div class="screen">
+
+    </div>
+    <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+    </div>
+    <div class="row">
+        <div class="seat "></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+    </div>
+    <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+    </div>
+    <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+    </div>
+    <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+    </div>
+    <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+    </div>
+</div>
+
+</div>-->

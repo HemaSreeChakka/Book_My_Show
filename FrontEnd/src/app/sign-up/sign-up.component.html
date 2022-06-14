@@ -1,0 +1,96 @@
+
+<div class="container ">
+    <div class="card"> 
+   
+   
+        <div class="card-body w-75">
+
+         
+            <form  [formGroup]="signupForm" class="mr-5 myform " (ngSubmit)="onSubmit()">
+              <div id="user-data">
+                <div class="form-group ">
+                  <label for="username">Name</label>
+                  <input 
+                  type="text" 
+                  id="userName" class="form-control"
+                  minlength="3"
+                  formControlName="userName"
+           
+                  name="userName"
+                  required
+                >
+                 <span *ngIf="!userName?.valid && (userName?.dirty ||userName?.touched)" class="text-danger help-block">**Please Enter UserName</span>
+                </div>
+                
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input
+                  type="email" 
+                  id="email" 
+                  class="form-control "
+             
+                  name="userEmail"
+                  formControlName="userEmail"
+                  required
+                  email
+               >
+                  <span *ngIf="!userEmail?.valid && (userEmail?.dirty ||userEmail?.touched)" class="text-danger help-block">**Please enter valid email</span>
+                </div>
+              
+    
+              <div class="form-group">
+                <label for="mobile">Mobile Number</label>
+                <input 
+                type="text" 
+                id="mobile" class="form-control"
+   
+                formControlName="userMobile"
+     
+                name="userMobile"
+                required
+               >
+                <span *ngIf="!userMobile?.valid && (userMobile?.dirty ||userMobile?.touched)" class="text-danger help-block">**Please enter valid mobile Number</span>
+              </div>
+              
+              <div class="form-group">
+                  <label for="password">Password </label>
+                  <input 
+                  type="password" 
+                  id="password" class="form-control"
+                
+                  formControlName="password"
+                  ngModel
+                  name="password"
+                  required
+                  >
+                  <span *ngIf="!password?.valid && (password?.dirty ||password?.touched)" class="text-danger help-block">**Please enter Password</span>
+                </div>
+                <div class="form-group">
+                    <label for="ConfirmPassword">Confirm Password </label>
+                    <input 
+                    type="password" 
+                    id="ConfirmPassword" class="form-control"
+                  
+                    formControlName="confirmPassword"
+              
+                    name="confirmPassword"
+                    required
+                   
+                  >
+                    <span *ngIf="!confirmPassword?.valid && (confirmPassword?.dirty ||confirmPassword?.touched) " class="text-danger help-block">**Please enter  Valid Password</span>
+                 <span *ngIf="confirmPassword?.valid && confirmPassword?.value != password?.value"  class="text-danger help-block"> **Password didn't match</span>
+                  </div>
+                
+  
+             
+              <button class="btn  btn-success px-4 addbtn mt-4 mr-5" type="submit"  [disabled]="!signupForm.valid"
+              >Sign-Up</button><span class="mx-5">
+                <a href="#" routerLink="/home"> <button class="btn  btn-primary px-3 home mt-4 ml-5 text-center"  type="submit"  
+              >Back to home</button></a>  </span>
+            </div>
+      
+            </form>
+   
+        
+    </div>
+      </div>
